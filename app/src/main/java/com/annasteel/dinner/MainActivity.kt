@@ -6,13 +6,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 
-val foodList = arrayListOf<String>("Chinese", "Sushi", "Pizza", "Pasta", "Frozen Veggies", "Fish", "Bakery" )
+val foodList = arrayListOf<String>("Chinese", "Sushi", "Pizza", "Pasta", "Frozen Veggies", "Fish", "Go out" )
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        selectedFoodTxt.text = ""
 
         decideButton.setOnClickListener {
             val random = Random()
